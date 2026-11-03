@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title>Smile Dental Clinic🦷</title>
+ <link href="w3.css" rel="stylesheet">
+ <style>
+ header h1{
+ color:#0077b6;
+ font-size:32px;
+ font-weight:bold;
+ letter-spacing:1px;
+ }
+ nav a:hover{
+ text-decoration:none;
+ padding:10px 15px;
+ color:#0077b6;
+ font-weight:bold;
+ transition:0.3s;
+ }
+ 
+ .w3-card{
+  border:1px solid #0076b6;
+  }
+  .w3-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 10px 20px gray;
+  }
+  /*Services cards*/
+  .w3-card{
+  border:1px solid lightgray;
+  transition:0.3s;
+  }
+ /*Buttons*/
+ .w3-button{
+ border-radius:5px;
+ }
+ .w3-button:hover{
+ background-color:#023e8a!important;
+ color:white!important;
+ }
+  #services h3 {
+   color:#0077b6 !important;
+   text-shadow:1px 1px 2px lightgray !important;
+ }
+ .w3-card{
+ background-color:white;
+ border-radius:10px;
+ overflow:hidden;
+ }
+   #about p {
+    line-height: 1.7;
+    color: #808080;/*dark gray */
+    text-align: justify;
+	}
+	.doctor-card{
+	height:1000px;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
+	}
+	#Doctors h3{
+
+	margin-bottom:5px ;
+	margin-top:10px;
+	}
+	
+	.patient-photo {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  }
+    .doctor-card p{
+   font-weight:400;
+   color:#6b7280!important;
+   text-align:justify;
+  line-height:1.6;
+   }
+  .doctor-card{
+  width:100%;
+   max.width:350px;
+  min.height:500px;
+  padding:24px;
+  box-sizing:border-box;
+  display:flex;
+  flex-direction:column;
+  }
+  .doctor-card img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  object:position:center-top;
+  display:block;
+  }
+  
+
+
+ #Reviews h2 {
+    color: #FFFF00;
+    text-decoration: underline;
+    text-decoration-color: #90e0ef;
+    text-underline-offset: 8px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+  }
+ #Reviews h2:hover {
+    color: #00a6d6;
+}
+  #Reviews p{
+  text-align:justify;
+ line-height:1.7;
+ color:#777;
+   padding:0 20px;
+  }
+
+  #Reviews h4{
+  font-weight:normal;
+  color:#777;
+  }
+  #Reviews .w3-card {
+ box-shadow:0 4px 12px rgba(0,0,0,0.10);
+ height:350px;
+   box-sizing:border-box;
+   overflow:hidden;
+    }
+	#Contact .w3-card{
+	padding:24px!important;
+	border-radius:8px;
+	}
+	#Contact h3{
+	margin-top:0;
+	margin-bottom:20px;
+	font-size:22px;
+	color:#0077b6;
+	font-weight:bold;
+	}
+	#Contact input:focus;/*box blue hoga likhne vala*/
+	
+	#Contact textarea:{
+	min-height:100px;
+	resize:vertical;
+	outline:none;
+	border color:#0077b6;
+	border-radius:5px;
+	padding:10px;
+	margin-top:5px;
+	margin-bottom:12px;
+	font-style:normal;
+	width:100%;
+	box-sizing:border-box;
+	}
+	#Contact label{
+	font-weight:normal;
+	font-style:normal;
+	}
+	#Contact p{
+	line-height:1.6;
+	}
+	/* Appointment Section */
+
+.appointment-container {
+    display: flex;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 35px auto;
+    align-items: stretch;
+}
+  .appointment-form,
+   .clinic-info {
+    flex: 1;
+    min-width: 0;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+ }
+
+  .appointment-form h3,
+   .clinic-info h3 {
+    color: #0077b6;
+    margin-top: 0;
+   }
+
+  .appointment-form label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+ }
+
+  .appointment-form input,
+  .appointment-form select {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .appointment-form button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 13px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .appointment-form button:hover {
+    background-color: #005b8e;
+  }
+
+  .clinic-info h4 {
+    color: #0077b6;
+    margin-top: 25px;
+ }
+
+   .clinic-info p {
+    line-height: 1.6;
+  }
+
+  /* Mobile Screen */
+
+  @media screen and (max-width: 700px) {
+    .appointment-container {
+        flex-direction: column;
+    }
+	#team .w3-card {
+    border-radius: 10px;
+    border: 1px solid #d6eaf5;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+
+  #team .w3-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+
+   #team h4 {
+    color: #0077b6;
+ }
+
+  #team img {
+    border-radius: 6px;
+ }
+  </style>
+  </head>
+  <!--Menu-->
+ <body class="w3-pale-blue">
+ <header>
+
+ <h1 class ="w3-teal  w3-hover w3-text-white w3-center w3-jumbo">Smile😊 Dental Clinic🦷</h1>
+ <p class="w3-center w3-large w3-text-dark-green w3-underline"> <u><b>Your Smile 😊Is Our Priority</b></u></p>
+ </header>
+ <nav class ="w3-bar w3-teal">
+  <div class="w3-right">
+ <a href="#Home" class ="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button">Home</a>
+ <a href="#About"class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button">About</a>
+ <a href="#Services"class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button">Services</a>
+ <a href="#Doctors"class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3- w3-button">Doctors</a>
+ <a href="#Reviews"class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button">Reviews</a>
+ <a href="#Contact" class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button ">Contact</a>
+ <a href="#Appointment"class="w3-bar-item w3-hover-blue w3-text-white w3-round-large w3-button">Book Appointment</a>
+ <a href="#Team"class="w3-bar-item w3-hover-blue w3-text-blue w3-text-white w3-round-large w3-button">Our Team</a>
+ </nav>
+ <!--Home-->
+ <section id ="Home">
+ <div class ="w3-row w3-padding">
+ <div class="w3-half w3-padding">
+ <h2><marquee scrollamount="3"><b><i><u>🦷✨Welcome to Our Dental Clinic🦷✨</b></i></u> </marquee></h2>
+ <p style="color:#444444;font-size:22px;font-weight:bold;letter-spacing:1px;">"We Care For Your Beautiful Smile☺️."</p><br>
+ <p style="color:#444444;"><li>"We provide quality dental care for healthy and beautiful teeth✨."</li></p>
+ 
+ </div>
+  <div class="w3-half w3-padding">
+   <img src="divyanshu.jpeg"
+   class ="w3-image w3-round-large" alt="Dentist">
+   </div>
+ </section>
+ <div class="w3-container w3-light-grey">
+ <div class="About">
+ <div class="w3-row-padding w3-padding-32">
+ <div class="w3-half w3-padding" >
+ <img src="clinic.jpg"class="w3-round-large w3-border w3-border-blue" style="width:100%;height:400px; object-fit:cover;">
+ </div>
+ </section>
+ <!--About clinic-->
+ <section id="About">
+ <div class=" w3-half w3-padding">
+ <h2 class ="w3-text-teal"><b><u>🦷About My Clinic🦷</u></b></h2>
+ <h4>Welcome to Our Dental Clinic!🦷✨</h4>
+ <p class="w3-text-grey">
+  Caring For Your Teeth ,One Smile at a Time.
+  </p>
+ <p><span class="w3-text-green">✅</span> We are dedicated to providing quality dental care in a clean , comfortable, and friendly environment.</p> 
+ 
+ <p><span class "w3-text-green">✅</span>Our clinic is equipped with modern dental machines to help maintain healthy teeth and beautiful smiles.</p>
+ 
+ <p><span class="w3-text-green">✅</span>We provide dental check-ups,teeth cleaning,teeth whitening,and other dental care services.</p>
+  <br>
+ <p> 
+ <span class ="w3-tag w3-blue w3-round-large w3-padding"><marquee scrollamount="2">Your Smile😊,Our Priority🚨!</marquee></span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!--Dental Services-->
+ <section id="Services"> 
+ <div class="w3-container w3-padding-30 "id="Services" style="background-color:#f0faff">
+  
+   <h2 class="w3-center" style="color:#006D77">
+   <b><u> Our Dental🦷 🩺Services🦷
+  </b></u></h2>
+
+  <p class="w3-center w3-text-grey">
+    We Care For Your Beautiful Smile😊!
+  </p>
+    <div class="w3-row-padding">
+   <!-- Card 1 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round">
+     <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="dental.mp4" type="video/mp4">
+        </video>
+       <div class="w3-container w3-center">
+          <h3><b>Dental Checkup🦷</b></h3>
+          <p>Regular checkups help keep your teeth healthy and strong.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+ 		</div>
+    </div>
+     <!-- Card 2 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round">
+
+        <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="teeth-cleaning.mp4" type="video/mp4">
+        </video>
+        <div class="w3-container w3-center">
+          <h3><b>Teeth Cleaning</b></h3>
+          <p>Professional cleaning helps remove plaque and maintain oral hygiene.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round">
+    <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="teeth-filling.mp4" type="video/mp4">
+        </video>
+    <div class="w3-container w3-center">
+          <h3><b>Teeth Filling</b></h3>
+          <p>Dental fillings help repair teeth affected by cavities.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+       </div>
+    </div>
+   <!-- Card 4 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round">
+     <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="extraction.mp4" type="video/mp4">
+        </video>
+
+        <div class="w3-container w3-center">
+          <h3><b>Teeth Extraction</b></h3>
+          <p>A dentist removes a teeth when it cannot be saved.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+    </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round-large">
+	   <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="braces-treatment.mp4" type="video/mp4">
+        </video>
+   <div class="w3-container w3-center">
+          <h3><b>Braces Treatment</b></h3>
+          <p>Braces help align teeth and improve your smile.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+		</div>
+	  </div>
+  <!-- Card 6 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-round">
+     <video controls muted autoplay
+               style="width:100%;height:250px;object-fit:cover">
+          <source src="teeth-whitening.mp4" type="video/mp4">
+        </video>
+       <div class="w3-container w3-center">
+          <h3><b>Teeth Whitening</b></h3>
+          <p>Professional whitening can help brighten your smile.</p>
+          <button class="w3-button w3-blue w3-round-large">
+            Learn More
+          </button>
+        </div>
+    </div>
+    </div>
+	</section>
+	<!--Doctors-->
+
+   <section id="Doctors">
+   <div class="w3-container w3-padding-32 "id="Doctors">
+  <h2 class="w3-center"><b><i><u>👨‍⚕Meet Our Dentists👨‍⚕</u></i><b/></h2><br><br><br><br>
+  <div class="w3-row-padding">
+  <!Doctor 1->
+  <div class="w3-third w3-margin-bottom">
+  <div class="w3-card w3-hover-shadow w3-border w3-border-blue w3-border-4 w3-white doctor-card">
+   <img src="Doctor-1.jpeg" alt="Dr.Siddharth Jaiswal">
+   <div class="w3-container">
+   <h4 class="w3-center"><b><i>*Dr. Siddharth Jaiswal🩺*</i></b></h4><br>
+   <p class="w3-center w3-text-blue"><u class="w3-text-black"<b>Qualification:</b></u><b><br>BDS</b></p>
+   <p>Dr. Siddharth Jaiswal is a dedicated dental doctor who believes in providing quality dental care to every patient. He focuses on maintaining healthy teeth and beautiful smiles. He provides friendly guidance to patients and helps them understand the importance of oral hygiene. His aim is to make every patient feel comfortable and confident during dental treatment.</p>
+   </div>
+	  </div>
+	  </div>
+	  <!Doctor 2->
+	  <div class="w3-third w3-margin-bottom">
+	  <div class="w3-card w3-hover-shadow w3-border w3-border-blue w3-border-4 w3-white doctor-card">
+	  <img src="doctor-2.jpeg"alt="Dr.Rahul Seth">
+	  <div class="w3-container">
+	  <h4 class="w3-center"><b><i>*Dr.Rahul Seth🩺*</i></b></h4><br>
+	  <p class="w3-center w3-text-blue"><u class="w3-text-black"><b>Qualification:</b></u><br>BDS,MDS<br>(Oral & Maxillofacial Surgery)</b></p>
+	  <p >Dr. Rahul Seth is an experienced dental professional specializing in oral and maxillofacial surgery and dental implants. He is dedicated to providing quality dental care in a comfortable and friendly environment. He believes in understanding each patient's needs and recommending suitable treatments for healthy teeth and confident smiles.</p>
+	  </div>
+   </div>
+   </div>
+   <!Doctor 3->
+   <div class="w3-third w3-margin-bottom">
+  <div class="w3-card w3-hover-shadow w3-border w3-border-blue w3-border-4 w3-white doctor-card">
+  <img src="Madam-6.jpeg" alt="Dr.Monika Tiwari">
+  <div class="w3-container">
+   <h4 class="w3-center"><i><b>*Dr. Monika Tiwari🩺*<b></i></h4><br>
+    <p class="w3-center w3-text-blue"><u class="w3-text-black"><b>Qualification:</b></u><br>BDS,MDS<br>(Gold Medalist)</b></p>
+<p>Dr. Monika Tiwari is a dental specialist based in Prayagraj. She provides dental care for children and helps patients with various dental problems, including root canal treatment. She focuses on maintaining healthy teeth and gums through proper dental care and guidance. Her aim is to make every dental visit comfortable and help patients.</p>
+  
+</div>
+</div>
+</div>
+  </section>
+  <!--Patient Reviews-->
+ <section id="Reviews">
+<div class="w3-container w3-padding-64" 
+     style="background-color:#fofaff">
+	 <div class="review-title">
+	 <p class="review-tag w3-center">❤️TRUST .CARE .SMILES❤️</p>
+	 
+ <h2 class="w3-center"style="color:#0B63A0;font-style:italic;">
+     <u>Patient Reviews</u>
+  </h2>
+  <p class="w3-center">
+    <b>What Our Patients Say About Us</b>
+  </p>
+   <div class="w3-row-padding">
+   <div class="w3-third w3-margin-bottom">
+  <div class="w3-card w3-white w3-padding-24">
+  <div class="w3-center">
+  <img src="patient-4.jpg" class="patient-photo ">
+  </div>
+        <h3 class="w3-center" style="color:#FFFF00">★★★★★</h3>
+        <p>"I visited this clinic for teeth cleaning and had a great experience. The dentist was gentle and explained how to maintain good oral hygiene. The service was excellent, my family and friends."</p>
+        <h4 class="w3-center">S.K</h4>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding-24">
+	  <div class="w3-center">
+	  <img src="patient-5.jpg" class="patient-photo">
+	  </div>
+        <h3 class="w3-center"style="color:#FFFF00">★★★★★</h3>
+        <p >I am very happy with the dental care I received at this clinic. The doctor was kind, patient, and explained the treatment in a simple way. The staff was helpful, and the entire visit was smooth and comfortable".</p>
+        <h4 class="w3-center">Beauty Tiwari</h4>
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding-24">
+	  <div class="w3-center">
+	  <img src="pat-3.jpg" class="patient-photo">
+	  </div>
+        <h3 class="w3-center" style="color:#FFFF00">★★★★★</h3>
+        <p>I had a wonderful experience at this dental clinic. The staff was friendly, and the dentist explained everything clearly. The treatment was painless and comfortable. I highly recommend this clinic to everyone."</p>
+        <h4 class="w3-center">Ashish Tripathi</h4>
+      </div>
+    </div>
+	<div class="w3-third w3-margin-bottom">
+	<div class="w3-card w3-white w3-padding-24">
+	<div class="w3-center">
+	<img src="reva.jpeg" class="patient-photo">
+	</div>
+ <h3 class="w3-center" style ="color:#FFFF00">★★★★★</h3>
+ <p>The clinic is very clean and well-maintained. The doctor was professional, polite, and caring. I am very satisfied with the treatment and the overall service. Thank you for taking such good care of my teeth."</p>
+ <h4 class="w3-center">Ashish Yadav</h4>
+ </div>
+ </div>
+ <div class="w3-third w3-margin-bottom">
+ <div class="w3-card w3-white w3-padding-24">
+ <div class="w3-center">
+ <img src="patient-1.jpg" class="patient-photo">
+ </div>
+ <h3 class="w3-center" style="color:#FFFF00">★★★★★</h3>
+ <p >Excellent dental care with a friendly atmosphere. The doctor listened to my concerns and made me feel comfortable throughout the visit. The clinic has modern facilities and provides professional service."</p>
+ <h4 class="w3-center">Neha Mishra</h4>
+ </div>
+ </div>
+ <div class="w3-third w3-margin-bottom">
+ <div class="w3-card w3-white w3-padding-24">
+ <div class="w3-center">
+ <img src ="patient-6.jpg"class="patient-photo">
+ </div>
+ <h3 class="w3-center" style="color:#FFFF00">★★★★★</h3>
+ <p>Great dental clinic with friendly staff and excellent care. The dentist was kind, professional, and made my visit comfortable. Highly recommended!The doctor was kind and explained everything clearly".</p>
+ <h4 class="w3-center">Isha Jaiswal</h4>
+ </div>
+ </div>
+ </section>
+ 
+ <!-- Contact Section -->
+  <section id="Contact">
+   <div class="w3-container w3-padding-64 "id="Contact"style="background-color:#f0faff">
+   <h2 class="w3-center" style="color:#006D77";>
+  <u><b>📞 Contact Us</b></u>
+    </h2>
+  <p class="w3-center">
+   We Are Always Ready To Help You!
+   </p>
+   <div class="w3-row-padding">
+   <!-- Left Side -->
+  <div class="w3-half">
+  <div class="w3-card w3-white w3-padding-32"
+     style="border-radius:12px">
+  <h3 style="color:#0077b6">Get In Touch:-</h3>
+  <p>📍 <b>Address:</b> Smile Dental Clinic</p>
+ <p>📞 <b>Phone:</b>
+  <a href="tel:+919876543210">+91 98765 43210</a>
+  </p>
+  <p>📧 <b>smilecaredentalclinic@gmail.com</b>
+   <a href="mailto:info@example.com">info@example.com</a>
+   </p>
+  <p>🕒 <b>Opening Hours:</b></p>
+  <p>Monday - Saturday: 10 AM - 7 PM</p>
+  <p>Sunday:Clinic closed</p>
+  <a href="tel:+919876543210"
+  class="w3-button w3-blue w3-round-large">
+  Call Now 📞
+  
+  
+  </a>
+  </div>
+  </div>
+
+  <!-- Right Side -->
+  <div class="w3-half">
+  <div class="w3-card w3-white w3-padding-32"
+     style="border-radius:12px">
+  <h3 style="color:#0077b6">Send Us A Message✉️</h3>
+  <form action="mailto:info@example.com"
+      method="post"
+      enctype="text/plain">
+  <label>Full Name</label>
+   <input class="w3-input w3-border w3-round"
+   type="text" name="Name"
+   placeholder="Enter your name" required>
+
+<br>
+
+   <label>Phone Number</label>
+
+   <input class="w3-input w3-border w3-round"
+   type="tel" name="Phone"
+   placeholder="Enter your phone number" required>
+
+  <br>
+
+<label>Email Address</label>
+
+<input class="w3-input w3-border w3-round"
+type="email" name="Email"
+placeholder="Enter your email">
+
+
+<br>
+
+<label>Your Message</label>
+
+<textarea class="w3-input w3-border w3-round"
+name="Message" rows="4"
+placeholder="Write your message here..."
+    required></textarea>
+
+    <br>
+
+   <button type="submit"
+    class="w3-button w3-blue w3-round-large">
+   Send Message ✉️
+</button>
+<h3 style="color:#0077b6;">Our Location</h3>
+
+    <iframe
+   src="https://www.google.com/maps?q=Prayagraj,Uttar Pradesh&output=embed"
+   width="100%"
+   height="200"
+    style="border:0;">
+   </iframe>
+
+   </form>
+
+   </div>
+   </div>
+
+</div>
+</div>
+</section>
+<!-- Book Appointment Section -->
+
+<section id="Appointment">
+        <div class="w3-container w3-padding-64"id=" Appointment"
+         style="background-color:#f0faff">
+
+  <h2 class="w3-center"
+      style="color:#006D77">
+   <u><b>😊Book an Appointment📅</b></u>
+  </h2>
+
+  <p class="w3-center">
+    Your Smile,😊 Our Priority!
+  </p>
+
+  <div class="appointment-container">
+
+    <!-- Appointment Form -->
+
+    <div class="appointment-form">
+
+      <h3>Book Your Visit✌️</h3>
+
+      <form>
+
+        <label>Full Name</label>
+        <input type="text"
+               placeholder="Enter your name"
+               required>
+
+        <label>Mobile Number</label>
+        <input type="tel"
+               placeholder="Enter mobile number"
+               required>
+
+        <label>Email Address</label>
+        <input type="email"
+               placeholder="Enter your email">
+
+        <label>Select Doctor</label>
+        <select required>
+          <option value="">Choose a doctor</option>
+          <option>Dr. Siddharth Jaiswal</option>
+		  <option>Dr.Rahul Seth</option>
+		  <option>Dr.Monika Tiwari</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" required>
+
+        <label>Appointment Time</label>
+        <input type="time" required>
+
+        <button type="submit">
+          Book Appointment
+        </button>
+
+      </form>
+
+    </div>
+
+    <!-- Clinic Information -->
+
+    <div class="clinic-info">
+
+      <h3><u>Clinic Information.💁‍♂️</u></h3>
+
+      <h4>Smile😊Dental Clinic🦷</h4>
+
+      <p>📍 <b>Address</b></p>
+      <p>Prayagraj, Uttar Pradesh, India</p>
+
+      <p>📞 <b>Phone Number</b></p>
+      <p>+91-XXXXXXXXXX</p>
+
+      <p>🕒 <b>Opening Hours⏰</b></p>
+      <p>Monday – Saturday</p>
+      <p>10:00 AM – 7:00 PM</p>
+	  <p>Sunday Closed</p>
+
+      <p>🦷 <b>Our Promise Making Every Smile😊 Brighter💫😁</b></p>
+      <p>We care for your smile!😊</p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- Our Team Section -->
+<section id="Team">
+
+<div class="w3-container w3-padding-32" id="team"
+     style="background-color:#f0faff">
+
+  <h2 class="w3-center" style="color:#0077b6">
+ <b><u> Meet Our Team 👨‍💻</u></b>
+  </h2>
+
+  <p class="w3-center">
+    The People Behind Our Dental Clinic Website
+  </p>
+
+  <div class="w3-row-padding w3-margin-top">
+
+    <!-- Team Member 1 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding w3-center">
+        <img src="pragati.jpeg" alt="Team Member 1"
+             style="width:100%; height:180px; object-fit:contain; ">
+        <h3>Pragati Tripathi😎</h3>
+        <p> Team Leader& Website Developer</p>
+      </div>
+    </div>
+    <!-- Team Member 2 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding w3-center">
+        <img src="Sanju.jpeg" alt="Team Member 3"
+             style="width:100%; height:180px; object-fit:contain">
+        <h3>Sanjana Yadav😎</h3>
+        <p>Content Researcher</p>
+      </div>
+    </div>
+
+    <!-- Team Member 4 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding w3-center">
+        <img src="kuldeep.jpg" alt="Team Member 3"
+             style="width:100%; height:180px; object-fit:contain">
+        <h3>Kuldeep Shukla😎</h3>
+        <p>Website Designer</p>
+      </div>
+    </div>
+
+    <!-- Team Member 5 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding w3-center">
+        <img src="sheetal.jpeg" alt="Team Member 4"
+             style="width:100%; height:180px; object-fit:contain">
+        <h3>SheetaL Pal😎</h3>
+        <p>Content& Testing</p>
+      </div>
+    </div>
+	 <!-- Team Member 6 -->
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card w3-white w3-padding w3-center">
+        <img src="harsh.jpg" alt="Team Member 5"
+             style="width:100%; height:180px; object-fit:contain">
+        <h3>Harsh Kesharwani😎</h3>
+        <p>Media Coordinator</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+<!-- Footer Section -->
+<footer class="w3-container w3-padding-32"
+        style="background-color:#023e8a; color:white;">
+
+  <div class="w3-row-padding">
+
+    <!-- Column 1: Clinic -->
+    <div class="w3-quarter">
+      <h3><b>🦷 SmileCare</b></h3>
+
+      <p>Your smile is our priority!</p>
+
+      <p>
+        We provide quality dental care
+        for a healthy and beautiful smile.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="w3-quarter">
+      <h4><b>Quick Links</b></h4>
+
+      <p><a href="#Home">Home</a></p>
+      <p><a href="#About">About</a></p>
+      <p><a href="#Doctors">Doctors</a></p>
+      <p><a href="#Services">Services</a></p>
+      <p><a href="#Reviews">Reviews</a></p>
+      <p><a href="#Team">Our Team</a></p>
+      <p><a href="#Appointment">Book Appointment</a></p>
+    </div>
+
+    <!-- Column 3: Our Services -->
+    <div class="w3-quarter">
+      <h4><b><u>Our Services</u></b></h4>
+
+      <p>General Dentistry</p>
+      <p>Teeth Whitening</p>
+      <p>Braces Treatment</p>
+      <p>Kids Dentistry</p>
+      <p>Dental Crowns</p>
+    </div>
+
+    <!-- Column 4: Contact -->
+    <div class="w3-quarter">
+      <h4><b>Contact Us</b></h4>
+
+      <p>📍 Prayagraj, Uttar Pradesh</p>
+      <p>📞 XXXXXXX</p>
+      <p>✉️smilecaredentalclinic@gmail.com </p>
+      <p>🕒 Mon - Sat: 10 AM to 7 PM</p>
+       <p>Sunday: Closed</p> </p>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="w3-center w3-padding-16"
+       style="border-top:1px solid #90caf9; margin-top:20px;">
+
+    <p>
+      © 2026 SmileCare Dental Clinic.
+      All Rights Reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+   
+
+    
+    
+
+
+
+
+
+
+    
+
+</body>
+</html>
+
+ 
+ 
+ 
+ 
+
+	
+
+ 
+
+	  
+	   
+    
+  
+  
+  
+  
+  
+  
+
+
+  
+      
+		
+ </body>
+ </html>
+ 
+ 

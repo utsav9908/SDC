@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmileCare | Premium Dental Clinic</title>
+
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+/* ================= BASIC SETTINGS ================= */
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #061b38;
+    --navy-light: #0b3158;
+    --blue: #087ca7;
+    --cyan: #39d5f2;
+    --pale: #eaf8fc;
+    --white: #ffffff;
+    --text: #425269;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6fbfe;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.25;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: 0.3s;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.section {
+    padding: 85px 5%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+    color: #718096;
+}
+
+.eyebrow {
+    color: #078bb6;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.gradient-text {
+    color: var(--cyan);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 24px;
+    background: var(--cyan);
+    color: var(--navy);
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    border: 2px solid var(--cyan);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--cyan);
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border-color: rgba(255,255,255,0.6);
+    margin-left: 8px;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(6,27,56,0.07);
+    height: 100%;
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 38px rgba(6,27,56,0.14);
+}
+
+.icon-box {
+    width: 68px;
+    height: 68px;
+    background: var(--pale);
+    color: var(--blue);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 16px;
+    margin-bottom: 18px;
+}
+
+.small-tag {
+    display: inline-block;
+    background: #e1f8ff;
+    color: #087ca7;
+    padding: 6px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar {
+    background: #031329;
+    color: #d8e9f6;
+    padding: 9px 5%;
+    font-size: 13px;
+}
+
+.topbar a {
+    color: #d8e9f6;
+    text-decoration: none;
+}
+
+.topbar a:hover {
+    color: var(--cyan);
+}
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+    background: var(--navy);
+    padding: 14px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo i {
+    color: var(--cyan);
+}
+
+.nav-links a {
+    color: #e7f3ff;
+    display: inline-block;
+    padding: 12px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: var(--cyan);
+    transform: translateY(-2px);
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+    background:
+    radial-gradient(circle at 85% 20%, #0c5278 0, transparent 35%),
+    linear-gradient(125deg, #031329, #082d51 65%, #064b70);
+    color: white;
+    padding: 85px 6%;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1250px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 54px;
+    font-weight: bold;
+    margin: 22px 0;
+}
+
+.hero p {
+    color: #d4e4f1;
+    font-size: 17px;
+    max-width: 570px;
+    margin-bottom: 28px;
+}
+
+.hero-points {
+    margin-top: 28px;
+    color: #d8f8ff;
+    font-size: 14px;
+}
+
+.hero-points span {
+    margin-right: 18px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.hero-points i {
+    color: var(--cyan);
+}
+
+.hero-art {
+    padding: 25px;
+    text-align: center;
+}
+
+.hero-art img {
+    width: 100%;
+    max-width: 470px;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 45% 45% 18px 18px;
+    border: 5px solid rgba(255,255,255,0.16);
+    box-shadow: 0 25px 60px #0005;
+}
+
+.hero-badge {
+    background: white;
+    color: var(--navy);
+    padding: 18px 22px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: -35px;
+    position: relative;
+    box-shadow: 0 10px 25px #0003;
+}
+
+.hero-badge strong {
+    color: #078bb6;
+    font-size: 21px;
+}
+
+/* ================= QUICK FACTS ================= */
+
+.quick-facts {
+    background: white;
+    padding: 28px 5%;
+    box-shadow: 0 5px 25px #0b31580c;
+}
+
+.fact {
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid #e1eaf0;
+}
+
+.fact:last-child {
+    border-right: none;
+}
+
+.fact h3 {
+    color: var(--navy);
+    margin: 0;
+    font-weight: bold;
+}
+
+.fact p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    background: white;
+}
+
+.about-image {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.about-copy h2 {
+    font-size: 38px;
+    font-weight: bold;
+    color: var(--navy);
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+}
+
+.check-list li {
+    margin: 14px 0;
+}
+
+.check-list i {
+    color: #079bc5;
+    margin-right: 10px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section {
+    background: #eef8fc;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.service-card p {
+    font-size: 14px;
+}
+
+.service-link {
+    color: #087ca7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    color: var(--navy);
+    letter-spacing: 1px;
+}
+
+/* ================= DOCTORS ================= */
+
+.doctors-section {
+    background: white;
+}
+
+.doctor-card {
+    padding: 18px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.doctor-photo {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 12px;
+    background: #e1edf5;
+}
+
+.doctor-card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.doctor-card p {
+    font-size: 14px;
+}
+
+.doctor-role {
+    color: #087ca7;
+    font-weight: bold;
+}
+
+/* ================= WHY CHOOSE US ================= */
+
+.why-section {
+    background: var(--navy);
+    color: white;
+}
+
+.why-section .section-title {
+    color: white;
+}
+
+.why-section .section-subtitle {
+    color: #c3d9ea;
+}
+
+.why-card {
+    background: #0b2b4e;
+    border: 1px solid #19476b;
+    border-radius: 14px;
+    padding: 25px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    background: #103b63;
+    transform: translateY(-6px);
+}
+
+.why-card h3 {
+    color: white;
+}
+
+.why-card p {
+    color: #c7dceb;
+}
+
+/* ================= PROCESS ================= */
+
+.process-section {
+    background: #f6fbfe;
+}
+
+.step-number {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--cyan);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.reviews-section {
+    background: #eaf8fc;
+}
+
+.review-card {
+    background: white;
+    border-radius: 15px;
+    padding: 28px;
+    height: 100%;
+    box-shadow: 0 7px 25px #061b3810;
+}
+
+.stars {
+    color: #f0ad28;
+    font-size: 19px;
+}
+
+.review-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+}
+
+/* ================= APPOINTMENT ================= */
+
+.appointment-section {
+    background:
+    linear-gradient(120deg, #031329, #0b3e65);
+    color: white;
+}
+
+.appointment-section .section-title {
+    color: white;
+}
+
+.appointment-section .section-subtitle {
+    color: #d0e4f2;
+}
+
+.appointment-box {
+    background: white;
+    color: var(--text);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px #0003;
+}
+
+.appointment-box h3 {
+    color: var(--navy);
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d6e2eb;
+    border-radius: 7px;
+    margin: 7px 0 17px;
+    font-family: Arial, sans-serif;
+}
+
+.form-control:focus {
+    outline: 2px solid #81dff3;
+    border-color: #079bc5;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #263e58;
+}
+
+.clinic-info {
+    padding: 20px 0;
+    border-bottom: 1px solid #ffffff26;
+}
+
+.clinic-info:last-child {
+    border-bottom: none;
+}
+
+.clinic-info i {
+    color: var(--cyan);
+    font-size: 24px;
+    margin-right: 12px;
+}
+
+/* ================= FAQ ================= */
+
+.faq-section {
+    background: white;
+}
+
+.faq-item {
+    background: #f4f9fc;
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 14px;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    color: var(--navy);
+    font-weight: bold;
+}
+
+/* ================= DEVELOPERS ================= */
+
+.developers-section {
+    background: #eaf8fc;
+}
+
+.developer-card {
+    text-align: center;
+    padding: 24px 15px;
+}
+
+.developer-photo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px #061b3820;
+    background: #dcecf5;
+    transition: 0.35s;
+}
+
+.developer-card:hover .developer-photo {
+    border-color: var(--cyan);
+    transform: scale(1.06);
+}
+
+.developer-card h3 {
+    color: var(--navy);
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.developer-card p {
+    color: #087ca7;
+    font-size: 14px;
+}
+
+/* ================= CONTACT CTA ================= */
+
+.cta {
+    background: #d9f6ff;
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.cta h2 {
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 32px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #031329;
+    color: #c9dbea;
+    padding: 55px 5% 20px;
+}
+
+.footer h3 {
+    color: white;
+    font-weight: bold;
+}
+
+.footer-logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.footer-logo i {
+    color: var(--cyan);
+}
+
+.footer a {
+    color: #c9dbea;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--cyan);
+}
+
+.footer-links a {
+    display: block;
+    padding: 5px 0;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    background: #0b3158;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.social-links a:hover {
+    background: #087ca7;
+    color: white;
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff22;
+    margin-top: 35px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.float-whatsapp {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 58px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    z-index: 2000;
+    text-decoration: none;
+    box-shadow: 0 5px 20px #0004;
+}
+
+.float-whatsapp:hover {
+    background: #128c4a;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+@media screen and (max-width: 900px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-art img {
+        height: 340px;
+    }
+
+    .section {
+        padding: 65px 5%;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topbar {
+        text-align: center;
+        line-height: 2;
+    }
+
+    .navbar {
+        text-align: center;
+        padding: 12px 3%;
+    }
+
+    .nav-links {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 8px 7px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-art img {
+        height: 300px;
+    }
+
+    .hero-points span {
+        margin-right: 7px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+        padding: 12px 17px;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    .section {
+        padding: 50px 5%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .about-copy h2 {
+        font-size: 30px;
+    }
+
+    .about-image {
+        height: 300px;
+        margin-bottom: 25px;
+    }
+
+    .fact {
+        border-right: none;
+        border-bottom: 1px solid #e1eaf0;
+    }
+
+    .doctor-photo {
+        height: 320px;
+    }
+
+    .appointment-box {
+        padding: 22px;
+    }
+
+    .developer-photo {
+        width: 130px;
+        height: 130px;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= TOP CONTACT BAR ================= -->
+
+<div class="topbar">
+    <div class="container">
+        <div class="w3-row">
+            <div class="w3-col s12 m7">
+                <i class="fa fa-clock-o"></i>
+                Clinic Timings: Add Actual Opening Hours
+                &nbsp; | &nbsp;
+                <i class="fa fa-map-marker"></i>
+                Add Your Clinic City
+            </div>
+
+            <div class="w3-col s12 m5 w3-right-align">
+                <a href="tel:+910000000000">
+                    <i class="fa fa-phone"></i> +91 00000 00000
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navbar">
+    <div class="container">
+        <div class="w3-row">
+
+            <div class="w3-col s12 m4">
+                <a href="#home" class="logo">
+                    <i class="fa fa-plus-square"></i>
+                    SmileCare<span class="gradient-text">.</span>
+                </a>
+            </div>
+
+            <div class="w3-col s12 m8 nav-links w3-right-align">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Doctors</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#appointment">Appointment</a>
+                <a href="#developers">Developers</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="w3-row">
+
+            <div class="w3-col s12 m7">
+                <span class="small-tag">
+                    <i class="fa fa-heartbeat"></i>
+                    YOUR SMILE, OUR PRIORITY
+                </span>
+
+                <h1>
+                    A Healthier Smile.<br>
+                    A <span class="gradient-text">Happier You.</span>
+                </h1>
+
+                <p>
+                    Welcome to SmileCare Dental Clinic.
+                    Discover dental services, meet our team
+                    and contact us to request an appointment.
+                    Your oral health deserves thoughtful care.
+                </p>
+
+                <a href="#appointment" class="btn">
+                    <i class="fa fa-calendar"></i>
+                    Request Appointment
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                </a>
+
+                <div class="hero-points">
+                    <span><i class="fa fa-check-circle"></i> Patient Focused</span>
+                    <span><i class="fa fa-check-circle"></i> Friendly Care</span>
+                    <span><i class="fa fa-check-circle"></i> Clear Guidance</span>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m5 hero-art">
+                <img src="clinic.jpg"
+                     alt="Dental clinic interior">
+
+                <div class="hero-badge">
+                    <strong><i class="fa fa-smile-o"></i> Smile with Confidence</strong>
+                    <br>
+                    <span>Start with an appointment request</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= QUICK FACTS ================= -->
+
+<section class="quick-facts">
+    <div class="container">
+        <div class="w3-row">
+
+            <div class="w3-col s12 m3 fact">
+                <h3><i class="fa fa-user-md"></i> 3 Doctors</h3>
+                <p>Meet Our Dental Team</p>
+            </div>
+
+            <div class="w3-col s12 m3 fact">
+                <h3><i class="fa fa-medkit"></i> Dental Care</h3>
+                <p>Explore Available Services</p>
+            </div>
+
+            <div class="w3-col s12 m3 fact">
+                <h3><i class="fa fa-calendar"></i> Appointments</h3>
+                <p>Send Your Request</p>
+            </div>
+
+            <div class="w3-col s12 m3 fact">
+                <h3><i class="fa fa-users"></i> Our Team</h3>
+                <p>5 Website Developers</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= ABOUT US ================= -->
+
+<section class="section about-section" id="about">
+    <div class="container">
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m6">
+                <img src="clinic-interior.jpg"
+                     alt="Dental clinic interior"
+                     class="about-image">
+            </div>
+
+            <div class="w3-col s12 m6 about-copy">
+                <span class="eyebrow">ABOUT OUR CLINIC</span>
+
+                <h2>Care That Begins With Your Smile</h2>
+
+                <p>
+                    SmileCare is a dental clinic website created to
+                    help visitors explore services, view doctor
+                    profiles and contact the clinic.
+                </p>
+
+                <p>
+                    Our aim is to make important clinic information
+                    easy to find. Replace this text with the real
+                    clinic's history, values and facilities.
+                </p>
+
+                <ul class="check-list">
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        Information about dental services
+                    </li>
+
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        Profiles of three doctors
+                    </li>
+
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        Appointment request form
+                    </li>
+
+                    <li>
+                        <i class="fa fa-check-circle"></i>
+                        Contact details and clinic timings
+                    </li>
+                </ul>
+
+                <a href="#doctors" class="btn">
+                    Meet Our Doctors
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services-section" id="services">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">WHAT WE OFFER</span>
+
+        <h2 class="section-title">Our Dental Services</h2>
+
+        <p class="section-subtitle">
+            Explore common dental service categories.
+            Actual treatments depend on clinical assessment
+            and the services available at your clinic.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-search"></i>
+                    </div>
+
+                    <h3>Dental Check-up</h3>
+
+                    <p>
+                        Routine oral examinations and advice
+                        about maintaining oral health.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-smile-o"></i>
+                    </div>
+
+                    <h3>Teeth Cleaning</h3>
+
+                    <p>
+                        Professional cleaning and guidance
+                        based on your dental needs.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-medkit"></i>
+                    </div>
+
+                    <h3>Tooth Pain Consultation</h3>
+
+                    <p>
+                        Assessment of toothache and discussion
+                        of suitable treatment options.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-plus-square"></i>
+                    </div>
+
+                    <h3>Dental Fillings</h3>
+
+                    <p>
+                        Assessment and treatment options for
+                        cavities and damaged teeth.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-user-md"></i>
+                    </div>
+
+                    <h3>Root Canal Consultation</h3>
+
+                    <p>
+                        Professional assessment for teeth
+                        that may need root canal treatment.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l4 w3-margin-bottom">
+                <div class="card service-card">
+                    <div class="icon-box">
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <h3>Smile Consultation</h3>
+
+                    <p>
+                        Discuss available options for the
+                        appearance and function of your smile.
+                    </p>
+
+                    <a href="#appointment" class="service-link">
+                        Request a Visit <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= DOCTORS ================= -->
+
+<section class="section doctors-section" id="doctors">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">OUR DENTAL TEAM</span>
+
+        <h2 class="section-title">Meet Our Doctors</h2>
+
+        <p class="section-subtitle">
+            Replace the sample names, photographs,
+            qualifications and specializations with
+            verified details of the actual doctors.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <!-- DOCTOR 1 -->
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card doctor-card">
+                    <img src="doctor1.jpg"
+                         alt="Doctor 1"
+                         class="doctor-photo">
+
+                    <h3>Dr. Doctor Name 1</h3>
+
+                    <p class="doctor-role">Dental Surgeon</p>
+
+                    <p>
+                        Qualification: Add actual qualification
+                    </p>
+
+                    <p>
+                        Specialization: Add actual specialization
+                    </p>
+
+                    <a href="#appointment" class="btn">
+                        Request Appointment
+                    </a>
+                </div>
+            </div>
+
+            <!-- DOCTOR 2 -->
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card doctor-card">
+                    <img src="doctor2.jpg"
+                         alt="Doctor 2"
+                         class="doctor-photo">
+
+                    <h3>Dr. Doctor Name 2</h3>
+
+                    <p class="doctor-role">Dental Specialist</p>
+
+                    <p>
+                        Qualification: Add actual qualification
+                    </p>
+
+                    <p>
+                        Specialization: Add actual specialization
+                    </p>
+
+                    <a href="#appointment" class="btn">
+                        Request Appointment
+                    </a>
+                </div>
+            </div>
+
+            <!-- DOCTOR 3 -->
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card doctor-card">
+                    <img src="doctor3.jpg"
+                         alt="Doctor 3"
+                         class="doctor-photo">
+
+                    <h3>Dr. Doctor Name 3</h3>
+
+                    <p class="doctor-role">Dental Consultant</p>
+
+                    <p>
+                        Qualification: Add actual qualification
+                    </p>
+
+                    <p>
+                        Specialization: Add actual specialization
+                    </p>
+
+                    <a href="#appointment" class="btn">
+                        Request Appointment
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="section why-section">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            WHY SMILECARE
+        </span>
+
+        <h2 class="section-title">
+            A Better Clinic Experience
+        </h2>
+
+        <p class="section-subtitle">
+            Update these features to reflect the real
+            clinic's services, equipment and practices.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa fa-comments"></i>
+                    </div>
+
+                    <h3>Clear Communication</h3>
+
+                    <p>
+                        Help patients understand their
+                        treatment options and next steps.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa fa-heart"></i>
+                    </div>
+
+                    <h3>Patient Comfort</h3>
+
+                    <p>
+                        Create a welcoming and respectful
+                        experience for clinic visitors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa fa-calendar-check-o"></i>
+                    </div>
+
+                    <h3>Easy Contact</h3>
+
+                    <p>
+                        Make clinic contact information
+                        and appointment requests easy to find.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="why-card">
+                    <div class="icon-box">
+                        <i class="fa fa-shield"></i>
+                    </div>
+
+                    <h3>Careful Practice</h3>
+
+                    <p>
+                        Share accurate information about
+                        the clinic's hygiene and safety procedures.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section process-section">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            SIMPLE STEPS
+        </span>
+
+        <h2 class="section-title">How to Contact Our Clinic</h2>
+
+        <p class="section-subtitle">
+            Use these steps to send an appointment request.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card w3-center">
+                    <span class="step-number">1</span>
+
+                    <h3>Choose a Service</h3>
+
+                    <p>
+                        Explore the available dental services
+                        and decide what you want to ask about.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card w3-center">
+                    <span class="step-number">2</span>
+
+                    <h3>Send Your Request</h3>
+
+                    <p>
+                        Enter your contact details and
+                        preferred date in the form below.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="card w3-center">
+                    <span class="step-number">3</span>
+
+                    <h3>Confirm With the Clinic</h3>
+
+                    <p>
+                        Contact the clinic directly to confirm
+                        availability and your appointment.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= PATIENT REVIEWS ================= -->
+
+<section class="section reviews-section" id="reviews">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            PATIENT FEEDBACK
+        </span>
+
+        <h2 class="section-title">What Patients Say</h2>
+
+        <p class="section-subtitle">
+            These are sample review layouts. Replace them
+            with genuine patient feedback used with permission.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <p>
+                        "Add a genuine review about the patient's
+                        experience with the clinic here."
+                    </p>
+
+                    <h3>Patient Name 1</h3>
+                    <span>Clinic Visitor</span>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <p>
+                        "Replace this sample text with an authentic
+                        patient review, shared with permission."
+                    </p>
+
+                    <h3>Patient Name 2</h3>
+                    <span>Clinic Visitor</span>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m4 w3-margin-bottom">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <p>
+                        "Add a real review here only after
+                        receiving it from the patient."
+                    </p>
+
+                    <h3>Patient Name 3</h3>
+                    <span>Clinic Visitor</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= APPOINTMENT ================= -->
+
+<section class="section appointment-section" id="appointment">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            GET IN TOUCH
+        </span>
+
+        <h2 class="section-title">Request an Appointment</h2>
+
+        <p class="section-subtitle">
+            Fill in the form or contact the clinic directly.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <!-- APPOINTMENT FORM -->
+            <div class="w3-col s12 m7 w3-margin-bottom">
+                <div class="appointment-box">
+
+                    <h3>
+                        <i class="fa fa-calendar-check-o"></i>
+                        Appointment Request Form
+                    </h3>
+
+                    <p>
+                        Please provide your details so the clinic
+                        can contact you about your request.
+                    </p>
+
+                    <!-- Replace email with your real clinic email -->
+                    <form action="mailto:yourclinic@example.com"
+                          method="post"
+                          enctype="text/plain">
+
+                        <label class="form-label">Full Name</label>
+
+                        <input class="form-control"
+                               type="text"
+                               name="Full Name"
+                               placeholder="Enter your full name"
+                               required>
+
+                        <label class="form-label">Phone Number</label>
+
+                        <input class="form-control"
+                               type="tel"
+                               name="Phone Number"
+                               placeholder="Enter your phone number"
+                               required>
+
+                        <label class="form-label">Email Address</label>
+
+                        <input class="form-control"
+                               type="email"
+                               name="Email"
+                               placeholder="Enter your email address">
+
+                        <label class="form-label">Choose a Service</label>
+
+                        <select class="form-control"
+                                name="Service"
+                                required>
+                            <option value="">Select a service</option>
+                            <option>Dental Check-up</option>
+                            <option>Teeth Cleaning</option>
+                            <option>Tooth Pain Consultation</option>
+                            <option>Dental Fillings</option>
+                            <option>Root Canal Consultation</option>
+                            <option>Smile Consultation</option>
+                            <option>Other</option>
+                        </select>
+
+                        <label class="form-label">Preferred Date</label>
+
+                        <input class="form-control"
+                               type="date"
+                               name="Preferred Date">
+
+                        <label class="form-label">Your Message</label>
+
+                        <textarea class="form-control"
+                                  name="Message"
+                                  rows="4"
+                                  placeholder="Write your question or message"></textarea>
+
+                        <button type="submit" class="btn">
+                            <i class="fa fa-paper-plane"></i>
+                            Send Appointment Request
+                        </button>
+                    </form>
+
+                    <p style="font-size:12px;color:#718096">
+                        This basic HTML form attempts to open the
+                        visitor's email application. It does not
+                        automatically store requests or confirm bookings.
+                    </p>
+                </div>
+            </div>
+
+            <!-- CONTACT DETAILS -->
+            <div class="w3-col s12 m5">
+                <h3 style="font-size:28px;font-weight:bold">
+                    Contact Information
+                </h3>
+
+                <p>
+                    Replace the sample information below
+                    with your clinic's actual details.
+                </p>
+
+                <div class="clinic-info">
+                    <i class="fa fa-map-marker"></i>
+                    <strong>Clinic Address</strong>
+                    <p>Add your complete clinic address here.</p>
+                </div>
+
+                <div class="clinic-info">
+                    <i class="fa fa-phone"></i>
+                    <strong>Phone Number</strong>
+                    <p>
+                        <a href="tel:+910000000000"
+                           style="color:#39d5f2">
+                            +91 00000 00000
+                        </a>
+                    </p>
+                </div>
+
+                <div class="clinic-info">
+                    <i class="fa fa-envelope"></i>
+                    <strong>Email Address</strong>
+                    <p>
+                        <a href="mailto:yourclinic@example.com"
+                           style="color:#39d5f2">
+                            yourclinic@example.com
+                        </a>
+                    </p>
+                </div>
+
+                <div class="clinic-info">
+                    <i class="fa fa-clock-o"></i>
+                    <strong>Opening Hours</strong>
+                    <p>Monday – Saturday: Add actual timings</p>
+                    <p>Sunday: Add actual timings</p>
+                </div>
+
+                <p style="margin-top:25px">
+                    <a href="https://wa.me/910000000000"
+                       target="_blank"
+                       rel="noopener"
+                       class="btn">
+                        <i class="fa fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+
+<section class="section faq-section">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            QUICK ANSWERS
+        </span>
+
+        <h2 class="section-title">Frequently Asked Questions</h2>
+
+        <p class="section-subtitle">
+            Helpful information for people visiting the website.
+        </p>
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m6">
+                <div class="faq-item">
+                    <h3>
+                        <i class="fa fa-question-circle"></i>
+                        How can I request an appointment?
+                    </h3>
+
+                    <p>
+                        Fill in the appointment form or contact
+                        the clinic using its verified phone number.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6">
+                <div class="faq-item">
+                    <h3>
+                        <i class="fa fa-question-circle"></i>
+                        Can I contact the clinic on WhatsApp?
+                    </h3>
+
+                    <p>
+                        Yes, after the clinic's real WhatsApp number
+                        is added to the website.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6">
+                <div class="faq-item">
+                    <h3>
+                        <i class="fa fa-question-circle"></i>
+                        Where can I find the doctors' details?
+                    </h3>
+
+                    <p>
+                        Visit the Doctors section to see their
+                        profiles, qualifications and specialties.
+                    </p>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6">
+                <div class="faq-item">
+                    <h3>
+                        <i class="fa fa-question-circle"></i>
+                        Does the website confirm bookings?
+                    </h3>
+
+                    <p>
+                        No. This static website sends a basic
+                        request only. The clinic must confirm it.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= DEVELOPERS ================= -->
+
+<section class="section developers-section" id="developers">
+    <div class="container">
+
+        <span class="eyebrow w3-center w3-block">
+            THE CREATIVE TEAM
+        </span>
+
+        <h2 class="section-title">
+            Developers of Dental Clinic Website
+        </h2>
+
+        <p class="section-subtitle">
+            Meet the five people behind this website.
+            Replace each sample image with the person's own photo.
+        </p>
+
+        <div class="w3-row-padding w3-center">
+
+            <!-- DEVELOPER 1 -->
+            <div class="w3-col s12 m4 l2 w3-margin-bottom">
+                <div class="card developer-card">
+
+                    <img src="kuldeep.jpg"
+                         alt="Kuldeep"
+                         class="developer-photo">
+
+                    <h3>Kuldeep</h3>
+
+                    <p>Web Developer</p>
+
+                    <span class="small-tag">HTML & CSS</span>
+                </div>
+            </div>
+
+            <!-- DEVELOPER 2 -->
+            <div class="w3-col s12 m4 l2 w3-margin-bottom">
+                <div class="card developer-card">
+
+                    <img src="harsh.jpg"
+                         alt="Harsh"
+                         class="developer-photo">
+
+                    <h3>Harsh</h3>
+
+                    <p>Web Developer</p>
+
+                    <span class="small-tag">Website Design</span>
+                </div>
+            </div>
+
+            <!-- DEVELOPER 3 -->
+            <div class="w3-col s12 m4 l2 w3-margin-bottom">
+                <div class="card developer-card">
+
+                    <img src="pragati.jpg"
+                         alt="Pragati"
+                         class="developer-photo">
+
+                    <h3>Pragati</h3>
+
+                    <p>UI Designer</p>
+
+                    <span class="small-tag">UI Design</span>
+                </div>
+            </div>
+
+            <!-- DEVELOPER 4 -->
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="card developer-card">
+
+                    <img src="sanjana.jpg"
+                         alt="Sanjana"
+                         class="developer-photo">
+
+                    <h3>Sanjana</h3>
+
+                    <p>Frontend Developer</p>
+
+                    <span class="small-tag">Frontend</span>
+                </div>
+            </div>
+
+            <!-- DEVELOPER 5 -->
+            <div class="w3-col s12 m6 l3 w3-margin-bottom">
+                <div class="card developer-card">
+
+                    <img src="sheetal.jpg"
+                         alt="Sheetal"
+                         class="developer-photo">
+
+                    <h3>Sheetal</h3>
+
+                    <p>Web Designer</p>
+
+                    <span class="small-tag">Creative Design</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="cta">
+    <div class="container">
+
+        <h2>Ready to Take Care of Your Smile?</h2>
+
+        <p>
+            Contact the clinic to ask questions or request
+            an appointment.
+        </p>
+
+        <a href="#appointment" class="btn">
+            <i class="fa fa-calendar"></i>
+            Contact Our Clinic
+        </a>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+    <div class="container">
+
+        <div class="w3-row-padding">
+
+            <div class="w3-col s12 m6 l4">
+                <div class="footer-logo">
+                    <i class="fa fa-plus-square"></i>
+                    SmileCare.
+                </div>
+
+                <p>
+                    A dental clinic website for sharing service
+                    information, doctor profiles and contact details.
+                </p>
+
+                <div class="social-links">
+                    <a href="#home" aria-label="Home">
+                        <i class="fa fa-home"></i>
+                    </a>
+
+                    <a href="#doctors" aria-label="Doctors">
+                        <i class="fa fa-user-md"></i>
+                    </a>
+
+                    <a href="#appointment" aria-label="Contact">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w3-col s12 m6 l2 footer-links">
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#services">Services</a>
+                <a href="#doctors">Our Doctors</a>
+                <a href="#reviews">Reviews</a>
+            </div>
+
+            <div class="w3-col s12 m6 l3 footer-links">
+                <h3>Our Services</h3>
+
+                <a href="#services">Dental Check-up</a>
+                <a href="#services">Teeth Cleaning</a>
+                <a href="#services">Dental Fillings</a>
+                <a href="#services">Root Canal Consultation</a>
+                <a href="#services">Smile Consultation</a>
+            </div>
+
+            <div class="w3-col s12 m6 l3">
+                <h3>Contact Us</h3>
+
+                <p>
+                    <i class="fa fa-map-marker"></i>
+                    Add your real clinic address
+                </p>
+
+                <p>
+                    <i class="fa fa-phone"></i>
+                    +91 00000 00000
+                </p>
+
+                <p>
+                    <i class="fa fa-envelope"></i>
+                    yourclinic@example.com
+                </p>
+            </div>
+
+        </div>
+
+      <div class ="w3-bottom">
+            <p>
+                &copy; 2026 SmileCare Dental Clinic.
+                All rights reserved.
+            </p>
+
+            <p>
+                Website Developers:
+                Kuldeep | Harsh | Pragati | Sanjana | Sheetal
+            </p>
+
+            <a href="#home">
+                Back to Top <i class="fa fa-arrow-up"></i>
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+
+</body>
+</html>

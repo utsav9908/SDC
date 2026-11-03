@@ -1,0 +1,2159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmileCare | Dental Clinic</title>
+
+<!-- W3.CSS -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+/* ===== GLOBAL STYLES ===== */
+:root {
+    --primary: #087f8c;
+    --primary-dark: #05616b;
+    --secondary: #e7f8f7;
+    --dark: #17313b;
+    --text: #61747b;
+    --white: #ffffff;
+    --light: #f7fbfb;
+    --accent: #ffca79;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.section {
+    padding: 95px 0;
+}
+
+.container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 24px;
+}
+
+.section-label {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    font-size: clamp(30px, 4vw, 45px);
+    margin: 12px 0 18px;
+}
+
+.section-description {
+    color: var(--text);
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 23px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: 2px solid var(--primary);
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px #087f8c30;
+}
+
+.btn-white {
+    background: white;
+    color: var(--primary);
+    border: 2px solid white;
+}
+
+.btn-white:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+.w3-animate-opacity {
+    animation-duration: 1.2s;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 20px #17313b0a;
+}
+
+.navbar {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 82px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    color: var(--dark);
+}
+
+.logo-icon {
+    background: var(--primary);
+    color: white;
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+}
+
+.logo span:last-child span {
+    color: var(--primary);
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 27px;
+}
+
+.nav-links a {
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 700;
+    transition: color .25s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-links .nav-cta {
+    background: var(--primary);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 7px;
+}
+
+.nav-links .nav-cta:hover {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: 0;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 8px;
+    padding: 10px 13px;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+    background: linear-gradient(120deg, #f1fbfa, #f9fcfc);
+    padding: 75px 0 85px;
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.02fr .98fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    gap: 9px;
+    align-items: center;
+    background: white;
+    color: var(--primary);
+    padding: 9px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 20px #17313b0a;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5.5vw, 67px);
+    letter-spacing: -2px;
+    margin: 25px 0 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero-text {
+    font-size: 17px;
+    color: var(--text);
+    max-width: 530px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.btn-outline {
+    border: 2px solid #d5e7e7;
+    color: var(--dark);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.hero-note {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.hero-note i {
+    font-size: 25px;
+    color: var(--primary);
+}
+
+.hero-note strong {
+    color: var(--dark);
+}
+
+.hero-visual {
+    position: relative;
+    padding: 15px;
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 12%;
+    border-radius: 48% 48% 18px 18px;
+    background: #d7f0ee;
+    transform: rotate(4deg);
+}
+
+.hero-visual img {
+    position: relative;
+    width: 100%;
+    height: 510px;
+    object-fit: cover;
+    border-radius: 48% 48% 18px 18px;
+    box-shadow: 0 25px 60px #17313b20;
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    left: -18px;
+    bottom: 60px;
+    background: white;
+    padding: 18px 22px;
+    border-radius: 13px;
+    box-shadow: 0 15px 45px #17313b18;
+    animation: floatCard 3s ease-in-out infinite;
+}
+
+.floating-card i {
+    color: #e7aa32;
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 16px;
+}
+
+.floating-card small {
+    color: var(--text);
+}
+
+/* ===== TRUST BAR ===== */
+.trust-bar {
+    background: var(--primary);
+    color: white;
+    padding: 25px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.trust-item {
+    padding: 10px;
+    border-right: 1px solid #ffffff35;
+}
+
+.trust-item:last-child {
+    border-right: none;
+}
+
+.trust-item i {
+    font-size: 25px;
+    margin-bottom: 8px;
+    color: var(--accent);
+}
+
+.trust-item strong {
+    display: block;
+    font-size: 15px;
+}
+
+/* ===== ABOUT ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    height: 480px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform .5s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.025);
+}
+
+.experience-card {
+    position: absolute;
+    bottom: 22px;
+    right: -20px;
+    background: var(--primary);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px #087f8c35;
+}
+
+.experience-card strong {
+    font-size: 32px;
+    display: block;
+}
+
+.about-content p {
+    color: var(--text);
+}
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+}
+
+.check-list li {
+    margin: 13px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.check-list i {
+    color: var(--primary);
+    margin-top: 6px;
+}
+
+/* ===== SERVICES ===== */
+.services {
+    background: var(--light);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #e8f0f0;
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform .35s, box-shadow .35s,
+                border-color .35s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #9edbd8;
+    box-shadow: 0 20px 45px #17313b10;
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--secondary);
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    font-size: 26px;
+    transition: transform .3s, background .3s, color .3s;
+}
+
+.service-card:hover .service-icon {
+    transform: rotate(-8deg) scale(1.1);
+    background: var(--primary);
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin: 23px 0 12px;
+}
+
+.service-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.service-link {
+    color: var(--primary);
+    font-weight: 800;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.service-link i {
+    transition: transform .25s;
+}
+
+.service-link:hover i {
+    transform: translateX(5px);
+}
+
+/* ===== WHY CHOOSE US ===== */
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.why-image img {
+    height: 470px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.why-feature {
+    display: flex;
+    gap: 18px;
+    margin: 28px 0;
+}
+
+.why-feature-icon {
+    min-width: 52px;
+    height: 52px;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+}
+
+.why-feature h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+}
+
+.why-feature p {
+    color: var(--text);
+    margin: 0;
+    font-size: 14px;
+}
+
+/* ===== DOCTORS ===== */
+.doctors {
+    background: var(--light);
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.doctor-card {
+    overflow: hidden;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #eaf0f0;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.doctor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px #17313b13;
+}
+
+.doctor-photo {
+    height: 290px;
+    overflow: hidden;
+    background: var(--secondary);
+}
+
+.doctor-photo img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform .5s;
+}
+
+.doctor-card:hover .doctor-photo img {
+    transform: scale(1.07);
+}
+
+.doctor-info {
+    padding: 23px;
+    text-align: center;
+}
+
+.doctor-info h3 {
+    margin: 0 0 8px;
+    font-size: 20px;
+}
+
+.doctor-info p {
+    margin: 0;
+    color: var(--text);
+    font-size: 14px;
+}
+
+.doctor-social {
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.doctor-social a {
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--primary);
+    transition: .3s;
+}
+
+.doctor-social a:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ===== PROCESS ===== */
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+}
+
+.process-card {
+    text-align: center;
+    padding: 30px 22px;
+}
+
+.process-number {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 20px;
+    background: var(--secondary);
+    color: var(--primary);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    font-weight: 800;
+    transition: .3s;
+}
+
+.process-card:hover .process-number {
+    background: var(--primary);
+    color: white;
+    transform: rotate(10deg);
+}
+
+.process-card h3 {
+    font-size: 20px;
+}
+
+.process-card p {
+    color: var(--text);
+    font-size: 14px;
+}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+    background: var(--secondary);
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 45px;
+}
+
+.testimonial-card {
+    background: white;
+    border-radius: 15px;
+    padding: 28px;
+    transition: transform .3s;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+}
+
+.stars {
+    color: #e6a52a;
+    letter-spacing: 3px;
+}
+
+.testimonial-card p {
+    color: var(--text);
+    font-size: 15px;
+}
+
+.patient {
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin-top: 22px;
+}
+
+.patient-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--secondary);
+    color: var(--primary);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+}
+
+.patient strong {
+    display: block;
+}
+
+.patient small {
+    color: var(--text);
+}
+
+/* ===== APPOINTMENT ===== */
+.appointment {
+    background: var(--primary);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.appointment-grid {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.appointment .section-label {
+    color: var(--accent);
+}
+
+.appointment-copy h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    margin: 16px 0;
+}
+
+.appointment-copy p {
+    color: #e0f3f3;
+}
+
+.contact-detail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 25px 0;
+}
+
+.contact-detail i {
+    font-size: 22px;
+    color: var(--accent);
+}
+
+.contact-detail strong {
+    display: block;
+}
+
+.contact-detail span {
+    font-size: 14px;
+    color: #e0f3f3;
+}
+
+.appointment-form {
+    background: white;
+    color: var(--dark);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px #003d4525;
+}
+
+.appointment-form h3 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 17px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce7e7;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    color: var(--dark);
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #087f8c18;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.form-submit {
+    width: 100%;
+    font: inherit;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.form-note {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 14px;
+}
+
+/* ===== FAQ ===== */
+.faq-list {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0eaea;
+    padding: 20px 0;
+}
+
+.faq-item summary {
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style-position: outside;
+}
+
+.faq-item p {
+    color: var(--text);
+    margin-bottom: 0;
+}
+
+.faq-item[open] summary {
+    color: var(--primary);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #122b34;
+    color: #d4e2e4;
+    padding: 65px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.footer .logo {
+    color: white;
+    margin-bottom: 22px;
+    width: fit-content;
+}
+
+.footer p {
+    color: #b7c9cc;
+    font-size: 14px;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 12px 0;
+}
+
+.footer-links a {
+    color: #b7c9cc;
+    transition: color .2s, padding .2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    background: #23424b;
+    color: white;
+    border-radius: 50%;
+    transition: .3s;
+}
+
+.footer-socials a:hover {
+    background: var(--primary);
+    transform: translateY(-4px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #ffffff20;
+    margin-top: 45px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #b7c9cc;
+}
+
+.back-top {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 500;
+    background: var(--primary);
+    color: white;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #17313b25;
+    transition: .3s;
+}
+
+.back-top:hover {
+    color: white;
+    background: var(--primary-dark);
+    transform: translateY(-4px);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes floatImage {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-9px); }
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-up {
+    animation: fadeUp .8s ease both;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1000px) {
+    .nav-links {
+        gap: 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .hero-visual img {
+        height: 420px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        min-height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 25px 25px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        box-shadow: 0 15px 20px #17313b12;
+    }
+
+    .nav-links.open {
+        display: flex;
+        animation: fadeUp .25s ease;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 15px;
+    }
+
+    .nav-links .nav-cta {
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .hero {
+        padding: 55px 0 65px;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .why-grid,
+    .appointment-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-note {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        max-width: 530px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .hero-visual img {
+        height: 430px;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-item:nth-child(2) {
+        border-right: none;
+    }
+
+    .trust-item:nth-child(3),
+    .trust-item:nth-child(4) {
+        border-top: 1px solid #ffffff35;
+        padding-top: 22px;
+    }
+
+    .about-image,
+    .why-image {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .experience-card {
+        right: 10px;
+    }
+
+    .services-grid,
+    .doctors-grid,
+    .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .appointment-copy {
+        text-align: center;
+    }
+
+    .contact-detail {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media (max-width: 520px) {
+    .section {
+        padding: 65px 0;
+    }
+
+    .container {
+        padding: 0 18px;
+    }
+
+    .hero h1 {
+        font-size: 41px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-visual img {
+        height: 340px;
+    }
+
+    .floating-card {
+        left: -2px;
+        bottom: 35px;
+        padding: 13px 15px;
+    }
+
+    .trust-grid {
+        gap: 0;
+    }
+
+    .trust-item {
+        font-size: 12px;
+    }
+
+    .about-image img,
+    .why-image img {
+        height: 340px;
+    }
+
+    .services-grid,
+    .doctors-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .doctor-photo {
+        height: 330px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .appointment-form {
+        padding: 23px 18px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="header">
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">
+                <i class="fa-solid fa-tooth"></i>
+            </span>
+            <span>Smile<span>Care</span><small>DENTAL CLINIC</small></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false"
+                aria-controls="navLinks">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#contact" class="nav-cta">Book Appointment ↗</a>
+        </div>
+
+    </nav>
+</header>
+
+<main>
+
+<!-- ========== HERO ========== -->
+<section class="hero w3-animate-opacity" id="home">
+    <div class="container hero-grid">
+
+        <div class="hero-content animate-up">
+            <div class="hero-badge">
+                <i class="fa-solid fa-heart-pulse"></i>
+                YOUR SMILE, OUR PRIORITY
+            </div>
+
+            <h1>A healthier smile,<br>
+                <span>a happier you.</span>
+            </h1>
+
+            <p class="hero-text">
+                Discover gentle, modern dental care designed around
+                your comfort. Our friendly team is here to help you
+                maintain a healthy, confident smile.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Book Appointment
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <a href="#services" class="btn btn-outline">
+                    Explore Services
+                </a>
+            </div>
+
+            <div class="hero-note">
+                <i class="fa-solid fa-shield-heart"></i>
+                <div>
+                    <strong>Care you can feel confident about</strong><br>
+                    <span>Friendly care for the whole family</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <img
+                src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85"
+                alt="Dental professional caring for a patient">
+
+            <div class="floating-card">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <strong>Gentle Dental Care</strong>
+                <small>Your comfort matters to us</small>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== TRUST BAR ========== -->
+<section class="trust-bar">
+    <div class="container trust-grid">
+
+        <div class="trust-item">
+            <i class="fa-solid fa-tooth"></i>
+            <strong>Preventive Care</strong>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-user-doctor"></i>
+            <strong>Professional Team</strong>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-heart"></i>
+            <strong>Patient Comfort</strong>
+        </div>
+
+        <div class="trust-item">
+            <i class="fa-solid fa-calendar-check"></i>
+            <strong>Easy Appointments</strong>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="section" id="about">
+    <div class="container about-grid">
+
+        <div class="about-image">
+            <img
+                src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=85"
+                alt="Modern dental clinic interior">
+
+            <div class="experience-card">
+                <strong><i class="fa-solid fa-heart"></i></strong>
+                Comfortable<br>Dental Care
+            </div>
+        </div>
+
+        <div class="about-content">
+            <span class="section-label">ABOUT OUR CLINIC</span>
+
+            <h2 class="section-title">
+                Your smile deserves the best care.
+            </h2>
+
+            <p>
+                At SmileCare Dental Clinic, we believe a healthy smile
+                begins with trust, comfort and personalized attention.
+                We aim to make every visit a positive experience.
+            </p>
+
+            <p>
+                From routine checkups to restorative treatments, our
+                team will explain your options and help you understand
+                your dental care plan.
+            </p>
+
+            <ul class="check-list">
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Personalized dental care plans
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Clear explanations of treatments
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Focus on hygiene and patient comfort
+                </li>
+                <li>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Care for children and adults
+                </li>
+            </ul>
+
+            <a href="#contact" class="btn btn-primary">
+                Get in Touch <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== SERVICES ========== -->
+<section class="section services" id="services">
+    <div class="container">
+
+        <div class="center">
+            <span class="section-label">WHAT WE OFFER</span>
+            <h2 class="section-title">Our Dental Services</h2>
+            <p class="section-description">
+                Explore dental services designed to support your oral
+                health and help you feel more confident about your smile.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-tooth"></i>
+                </div>
+                <h3>General Dentistry</h3>
+                <p>
+                    Routine dental examinations, professional cleaning
+                    and preventive care for healthier teeth and gums.
+                </p>
+                <a href="#contact" class="service-link">
+                    Book a Visit <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth"></i>
+                </div>
+                <h3>Teeth Whitening</h3>
+                <p>
+                    Learn about professional whitening options to
+                    address tooth discoloration and brighten your smile.
+                </p>
+                <a href="#contact" class="service-link">
+                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-teeth-open"></i>
+                </div>
+                <h3>Braces & Alignment</h3>
+                <p>
+                    Orthodontic consultations to discuss options for
+                    improving tooth alignment and bite concerns.
+                </p>
+                <a href="#contact" class="service-link">
+                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-child"></i>
+                </div>
+                <h3>Kids Dentistry</h3>
+                <p>
+                    Gentle, age-appropriate dental checkups and
+                    guidance to help children build healthy habits.
+                </p>
+                <a href="#contact" class="service-link">
+                    Book a Visit <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-syringe"></i>
+                </div>
+                <h3>Root Canal Treatment</h3>
+                <p>
+                    Assessment and treatment options for teeth affected
+                    by infection or damage to the dental pulp.
+                </p>
+                <a href="#contact" class="service-link">
+                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+            <article class="service-card w3-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-crown"></i>
+                </div>
+                <h3>Dental Crowns</h3>
+                <p>
+                    Discuss restorative options for protecting and
+                    rebuilding damaged or weakened teeth.
+                </p>
+                <a href="#contact" class="service-link">
+                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== WHY CHOOSE US ========== -->
+<section class="section">
+    <div class="container why-grid">
+
+        <div class="why-image">
+            <img
+                src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=1000&q=85"
+                alt="Dental professional working in a clinic">
+        </div>
+
+        <div>
+            <span class="section-label">WHY SMILECARE</span>
+
+            <h2 class="section-title">
+                Making dental visits feel easier.
+            </h2>
+
+            <p style="color:var(--text)">
+                We focus on respectful communication, clear treatment
+                information and a welcoming environment.
+            </p>
+
+            <div class="why-feature">
+                <div class="why-feature-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <div>
+                    <h3>Clear Communication</h3>
+                    <p>Understand your treatment choices and the next steps.</p>
+                </div>
+            </div>
+
+            <div class="why-feature">
+                <div class="why-feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h3>Hygiene-Focused Care</h3>
+                    <p>We emphasize appropriate infection-control practices.</p>
+                </div>
+            </div>
+
+            <div class="why-feature">
+                <div class="why-feature-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div>
+                    <h3>Family-Friendly Approach</h3>
+                    <p>Dental care and guidance for patients of different ages.</p>
+                </div>
+            </div>
+
+            <a href="#contact" class="btn btn-primary">
+                Schedule a Visit <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== DOCTORS ========== -->
+<section class="section doctors" id="doctors">
+    <div class="container">
+
+        <div class="center">
+            <span class="section-label">MEET THE TEAM</span>
+            <h2 class="section-title">Meet Our Dentists</h2>
+            <p class="section-description">
+                Add your clinic's real dentist profiles, qualifications
+                and areas of practice in this section.
+            </p>
+        </div>
+
+        <div class="doctors-grid">
+
+            <article class="doctor-card">
+                <div class="doctor-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=85"
+                        alt="Dentist profile placeholder one"
+                        loading="lazy">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Your Name</h3>
+                    <p>General Dentist</p>
+                    <div class="doctor-social">
+                        <a href="#contact" aria-label="Contact clinic">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="#contact" aria-label="Book a consultation">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="doctor-card">
+                <div class="doctor-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=85"
+                        alt="Dentist profile placeholder two"
+                        loading="lazy">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Your Name</h3>
+                    <p>Dental Consultant</p>
+                    <div class="doctor-social">
+                        <a href="#contact" aria-label="Contact clinic">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="#contact" aria-label="Book a consultation">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="doctor-card">
+                <div class="doctor-photo">
+                    <img
+                        src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=85"
+                        alt="Dentist profile placeholder three"
+                        loading="lazy">
+                </div>
+                <div class="doctor-info">
+                    <h3>Dr. Your Name</h3>
+                    <p>Restorative Dentist</p>
+                    <div class="doctor-social">
+                        <a href="#contact" aria-label="Contact clinic">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="#contact" aria-label="Book a consultation">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROCESS ========== -->
+<section class="section">
+    <div class="container">
+
+        <div class="center">
+            <span class="section-label">SIMPLE & CONVENIENT</span>
+            <h2 class="section-title">Your Visit in 3 Steps</h2>
+            <p class="section-description">
+                Getting started with your dental care can be simple.
+            </p>
+        </div>
+
+        <div class="process-grid">
+
+            <article class="process-card">
+                <div class="process-number">01</div>
+                <h3>Book an Appointment</h3>
+                <p>Send an appointment request through our contact form.</p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-number">02</div>
+                <h3>Meet Your Dentist</h3>
+                <p>Discuss your concerns and receive a dental assessment.</p>
+            </article>
+
+            <article class="process-card">
+                <div class="process-number">03</div>
+                <h3>Plan Your Care</h3>
+                <p>Review suitable treatment options with your dentist.</p>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="section testimonials" id="testimonials">
+    <div class="container">
+
+        <div class="center">
+            <span class="section-label">PATIENT EXPERIENCES</span>
+            <h2 class="section-title">What Patients Say</h2>
+            <p class="section-description">
+                Replace these sample testimonials with genuine,
+                permission-based feedback from your patients.
+            </p>
+        </div>
+
+        <div class="testimonial-grid">
+
+            <article class="testimonial-card">
+                <div class="stars" aria-label="Sample five star rating">
+                    ★★★★★
+                </div>
+                <p>
+                    "The clinic design is welcoming, and the team
+                    explained the appointment process clearly."
+                </p>
+                <div class="patient">
+                    <div class="patient-avatar">A</div>
+                    <div>
+                        <strong>Sample Patient</strong>
+                        <small>Patient feedback placeholder</small>
+                    </div>
+                </div>
+            </article>
+n
+                <div class="stars" aria-label="Sample five star rating">
+                    ★★★★★
+                </div>
+                <p>
+                    "I appreciated the time taken to explain the
+                    available options for my dental care."
+                </p>
+                <div class="patient">
+                    <div class="patient-avatar">R</div>
+                    <div>
+                        <strong>Sample Patient</strong>
+                        <small>Patient feedback placeholder</small>
+                    </div>
+                </div>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="stars" aria-label="Sample five star rating">
+                    ★★★★★
+                </div>
+                <p>
+                    "The appointment information was clear, and
+                    I knew what to expect before my visit."
+                </p>
+                <div class="patient">
+                    <div class="patient-avatar">S</div>
+                    <div>
+                        <strong>Sample Patient</strong>
+                        <small>Patient feedback placeholder</small>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ========== APPOINTMENT ========== -->
+<section class="section appointment" id="contact">
+    <div class="container appointment-grid">
+
+        <div class="appointment-copy">
+            <span class="section-label">LET'S CONNECT</span>
+
+            <h2>Ready to take care of your smile?</h2>
+
+            <p>
+                Send us an appointment request. Our clinic team can
+                contact you to discuss availability and next steps.
+            </p>
+
+            <div class="contact-detail">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                    <strong>Visit Our Clinic</strong>
+                    <span>Replace with your clinic address</span>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <strong>Call Our Clinic</strong>
+                    <span>Replace with your phone number</span>
+                </div>
+            </div>
+
+            <div class="contact-detail">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                    <strong>Email Us</strong>
+                    <span>Replace with your clinic email</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="appointment-form">
+            <h3>Request an Appointment</h3>
+            <p style="color:var(--text);font-size:14px">
+                Fill in your details to prepare an appointment request.
+            </p>
+
+            <form id="appointmentForm">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="patientName">Full Name *</label>
+                        <input type="text" id="patientName"
+                               name="patientName"
+                               placeholder="Enter your name"
+                               autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="patientPhone">Phone Number *</label>
+                        <input type="tel" id="patientPhone"
+                               name="patientPhone"
+                               placeholder="Enter your phone number"
+                               autocomplete="tel"
+                               pattern="[0-9+() -]{7,20}"
+                               required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="patientEmail">Email Address</label>
+                        <input type="email" id="patientEmail"
+                               name="patientEmail"
+                               placeholder="you@example.com"
+                               autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="visitDate">Preferred Date *</label>
+                        <input type="date" id="visitDate"
+                               name="visitDate" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Select a Service *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <option>General Dentistry</option>
+                        <option>Teeth Whitening</option>
+                        <option>Braces & Alignment</option>
+                        <option>Kids Dentistry</option>
+                        <option>Root Canal Treatment</option>
+                        <option>Dental Crowns</option>
+                        <option>General Consultation</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" name="message"
+                              placeholder="Write a short message (optional)"
+                              maxlength="500"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form-submit">
+                    Prepare Appointment Request
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <p id="formMessage" class="form-message"
+                   role="status" aria-live="polite"></p>
+
+                <p class="form-note">
+                    Demo form: submitting opens your email app.
+                    No request is sent automatically by this website.
+                </p>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section" id="faq">
+    <div class="container">
+
+        <div class="center">
+            <span class="section-label">HELPFUL INFORMATION</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+
+            <details class="faq-item">
+                <summary>How can I book a dental appointment?</summary>
+                <p>
+                    Complete the appointment request form on this page.
+                    The demo prepares an email request for you to review.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What should I bring to my first visit?</summary>
+                <p>
+                    Bring relevant dental records, a list of current
+                    medicines if applicable, and any questions for
+                    your dentist.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Do you provide care for children?</summary>
+                <p>
+                    The website lists children's dentistry as a service.
+                    Confirm actual availability with your clinic.
+                </p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I know which treatment I need?</summary>
+                <p>
+                    A qualified dentist can examine your teeth and
+                    discuss appropriate treatment options with you.
+                </p>
+            </details>
+
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a href="#home" class="logo">
+                    <span class="logo-icon">
+                        <i class="fa-solid fa-tooth"></i>
+                    </span>
+                    <span>Smile<span>Care</span>
+                        <small>DENTAL CLINIC</small>
+                    </span>
+                </a>
+
+                <p>
+                    Friendly dental care, helpful guidance and a
+                    welcoming experience for your family.
+                </p>
+
+                <div class="footer-socials">
+                    <a href="#contact" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#contact" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#contact" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#doctors">Our Doctors</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#services">General Dentistry</a></li>
+                    <li><a href="#services">Teeth Whitening</a></li>
+                    <li><a href="#services">Braces</a></li>
+                    <li><a href="#services">Kids Dentistry</a></li>
+                    <li><a href="#services">Dental Crowns</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Contact Information</h3>
+                <p><i class="fa-solid fa-location-dot"></i>
+                    Your Clinic Address</p>
+                <p><i class="fa-solid fa-phone"></i>
+                    Your Phone Number</p>
+                <p><i class="fa-solid fa-envelope"></i>
+                    yourclinic@example.com</p>
+                <p><i class="fa-regular fa-clock"></i>
+                    Add your clinic hours</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>
+                &copy; <span id="currentYear"></span>
+                SmileCare Dental Clinic. All rights reserved.
+            </span>
+            <span>Designed with HTML, CSS & W3.CSS</span>
+        </div>
+
+    </div>
+</footer>
+
+<a href="#home" class="back-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<!-- ========== JAVASCRIPT ========== -->
+<script>
+/* Mobile Navigation */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+    const isOpen = navLinks.classList.toggle("open");
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+    );
+
+    menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+});
+
+/* Close menu after selecting a link */
+navLinks.querySelectorAll("a").forEach(function (link) {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    });
+});
+
+/* Set the current year */
+document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+
+/* Prevent choosing a past appointment date */
+const dateInput = document.getElementById("visitDate");
+
+const today = new Date();
+const localToday = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, "0"),
+    String(today.getDate()).padStart(2, "0")
+].join("-");
+
+dateInput.min = localToday;
+
+/* Appointment form demo */
+const appointmentForm = document.getElementById("appointmentForm");
+const formMessage = document.getElementById("formMessage");
+
+appointmentForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (!appointmentForm.reportValidity()) {
+        return;
+    }
+
+    const name = document.getElementById("patientName").value.trim();
+    const phone = document.getElementById("patientPhone").value.trim();
+    const email = document.getElementById("patientEmail").value.trim();
+    const date = dateInput.value;
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    /*
+      Replace this with your real clinic email address.
+      The email application must be configured on the device.
+    */
+    const clinicEmail = "yourclinic@example.com";
+
+    const subject = "Dental Appointment Request";
+    const body =
+        "Appointment Request\n\n" +
+        "Name:"KULDEEP SHUKLA " + name + "\n" +
+        "Phone:"8840952079 " + phone + "\n" +
+        "Email:"KU;LDEEPSHUKLA7721@GMAIL.COM " + (email || "Not provided") + "\n" +
+        "Preferred Date: " + date + "\n" +
+        "Service: " + service + "\n" +
+        "Message: " + (message || "None");
+
+    const mailtoLink =
+        "mailto:" + clinicEmail +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+    formMessage.textContent =
+        "Opening your email app. Please review and send the request.";
+
+    window.location.href = mailtoLink;
+});
+</script>
+
+</body>
+</html>

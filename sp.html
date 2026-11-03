@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmileCare Dental Clinic</title>
+
+<link rel="stylesheet"
+href="https://www.w3schools.com/w3css/4/w3.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f8fc;
+    color: #243247;
+}
+
+.navbar {
+    background: #061b3a;
+    color: white;
+    padding: 12px 4%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #61d9ff;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background: #12a9d6;
+    color: white;
+    border-radius: 6px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #061b3a, #063d68);
+    color: white;
+    padding: 85px 7%;
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.btn {
+    background: #13b8df;
+    color: #061b3a;
+    padding: 13px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px #0003;
+}
+
+.section {
+    padding: 60px 6%;
+}
+
+.section-title {
+    text-align: center;
+    color: #062b52;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #637187;
+    margin-bottom: 35px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 16px #102b4612;
+    transition: 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px #102b4625;
+}
+
+.service-icon {
+    font-size: 38px;
+    color: #079bc5;
+    margin-bottom: 12px;
+}
+
+.doctor-photo {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 9px;
+    background: #e1edf5;
+}
+
+.developer-photo {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #14b8df;
+    background: #e1edf5;
+}
+
+.doctor-name,
+.developer-name {
+    color: #062b52;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e3f7ff;
+    color: #006a91;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.about {
+    background: #e9f5fc;
+}
+
+.contact {
+    background: #061b3a;
+    color: white;
+}
+
+.contact h2 {
+    color: white;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 7px 0 15px;
+    border: 1px solid #d0dce7;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+}
+
+label {
+    font-weight: bold;
+}
+
+.developers {
+    background: #e9f5fc;
+}
+
+footer {
+    background: #031329;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 14px 17px;
+    border-radius: 50%;
+    font-size: 27px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px #0004;
+    z-index: 999;
+}
+
+.whatsapp:hover {
+    background: #128c4a;
+    color: white;
+    transform: scale(1.08);
+}
+
+@media screen and (max-width: 700px) {
+    .hero {
+        padding: 55px 6%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+
+    .navbar a {
+        padding: 9px 7px;
+        font-size: 13px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .doctor-photo {
+        height: 240px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<div class="navbar">
+    <div class="w3-row">
+        <div class="w3-col s12 m4">
+            <span class="logo">
+                <i class="fa fa-plus-square"></i> SmileCare
+            </span>
+        </div>
+
+        <div class="w3-col s12 m8 w3-right-align">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointment">Appointment</a>
+            <a href="#developers">Developers</a>
+        </div>
+    </div>
+</div>
+
+<!-- HOME / HERO -->
+<section class="hero" id="home">
+    <div class="w3-row">
+        <div class="w3-col s12 m7">
+            <span class="tag">YOUR SMILE, OUR PRIORITY</span>
+
+            <h1>Healthy Teeth,<br>Beautiful Smile!</h1>
+
+            <p>
+                Welcome to SmileCare Dental Clinic.
+                We care for your teeth with comfort,
+                cleanliness and professional dental care.
+            </p>
+
+            <a href="#appointment" class="btn">
+                <i class="fa fa-calendar"></i> Book Appointment
+            </a>
+
+            <a href="#services" class="btn">
+                Our Services
+            </a>
+        </div>
+
+        <div class="w3-col s12 m5 w3-center w3-padding-32">
+            <i class="fa fa-smile-o"
+               style="font-size:170px;color:#61d9ff"></i>
+            <h3>Your Smile Matters!</h3>
+        </div>
+    </div>
+</section>
+
+<!-- CLINIC HIGHLIGHTS -->
+<section class="section">
+    <div class="w3-row-padding">
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-user-md service-icon"></i>
+                <h3>Experienced Doctors</h3>
+                <p>Meet our dental team and learn about their specialties.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-heartbeat service-icon"></i>
+                <h3>Patient Care</h3>
+                <p>We aim to provide friendly and comfortable dental care.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-shield service-icon"></i>
+                <h3>Clean Environment</h3>
+                <p>Show your clinic's hygiene and safety practices here.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+    <div class="w3-row-padding">
+
+        <div class="w3-col s12 m6">
+            <h2 class="section-title" style="text-align:left">
+                About Our Clinic
+            </h2>
+
+            <p>
+                SmileCare Dental Clinic is a dental clinic website
+                designed to share information about dental services,
+                doctors and appointment requests.
+            </p>
+
+            <p>
+                Add your clinic's real history, address, timings,
+                facilities and other verified information here.
+            </p>
+
+            <a href="#appointment" class="btn">
+                Contact Our Clinic
+            </a>
+        </div>
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3><i class="fa fa-check-circle"></i> Our Commitment</h3>
+                <p>Patient comfort and respectful communication.</p>
+
+                <h3><i class="fa fa-check-circle"></i> Our Approach</h3>
+                <p>Clear explanations and appropriate dental care.</p>
+
+                <h3><i class="fa fa-check-circle"></i> Our Goal</h3>
+                <p>Help patients make informed decisions about oral health.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h2 class="section-title">Our Dental Services</h2>
+    <p class="section-subtitle">
+        Add or edit services according to your real clinic.
+    </p>
+
+    <div class="w3-row-padding">
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-search service-icon"></i>
+                <h3>Dental Check-up</h3>
+                <p>Routine oral examination and dental consultation.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-smile-o service-icon"></i>
+                <h3>Teeth Cleaning</h3>
+                <p>Professional cleaning based on dental assessment.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-medkit service-icon"></i>
+                <h3>Tooth Pain Care</h3>
+                <p>Evaluation of tooth pain and suitable treatment options.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-plus-square service-icon"></i>
+                <h3>Dental Fillings</h3>
+                <p>Assessment and treatment of cavities where appropriate.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-user-md service-icon"></i>
+                <h3>Root Canal Treatment</h3>
+                <p>Specialist assessment for teeth that may need root canal care.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <i class="fa fa-star service-icon"></i>
+                <h3>Smile Consultation</h3>
+                <p>Discuss options for improving the appearance of your smile.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DOCTORS -->
+<section class="section about" id="doctors">
+    <h2 class="section-title">Meet Our Doctors</h2>
+    <p class="section-subtitle">
+        Replace these sample names, photos and qualifications
+        with verified details of your real doctors.
+    </p>
+
+    <div class="w3-row-padding">
+
+        <!-- DOCTOR 1 -->
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <img src="doctor1.jpg"
+                     alt="Doctor 1 photo"
+                     class="doctor-photo">
+
+                <h3 class="doctor-name">Dr. Doctor Name 1</h3>
+                <p class="tag">Dental Surgeon</p>
+                <p>Qualification: Add verified qualification</p>
+                <p>Experience: Add verified experience</p>
+
+                <a href="#appointment" class="btn">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+
+        <!-- DOCTOR 2 -->
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <img src="doctor2.jpg"
+                     alt="Doctor 2 photo"
+                     class="doctor-photo">
+
+                <h3 class="doctor-name">Dr. Doctor Name 2</h3>
+                <p class="tag">Dental Specialist</p>
+                <p>Qualification: Add verified qualification</p>
+                <p>Experience: Add verified experience</p>
+
+                <a href="#appointment" class="btn">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+
+        <!-- DOCTOR 3 -->
+        <div class="w3-col s12 m4">
+            <div class="card w3-center">
+                <img src="doctor3.jpg"
+                     alt="Doctor 3 photo"
+                     class="doctor-photo">
+
+                <h3 class="doctor-name">Dr. Doctor Name 3</h3>
+                <p class="tag">Dental Consultant</p>
+                <p>Qualification: Add verified qualification</p>
+                <p>Experience: Add verified experience</p>
+
+                <a href="#appointment" class="btn">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="section">
+    <h2 class="section-title">Why Choose Our Clinic?</h2>
+    <p class="section-subtitle">
+        Edit these points to match the real facilities available.
+    </p>
+
+    <div class="w3-row-padding">
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3><i class="fa fa-check-circle service-icon"></i>
+                    Friendly Environment</h3>
+                <p>Make patients feel welcome and comfortable.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3><i class="fa fa-check-circle service-icon"></i>
+                    Clear Communication</h3>
+                <p>Explain treatment options and costs clearly.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3><i class="fa fa-check-circle service-icon"></i>
+                    Appointment Requests</h3>
+                <p>Allow visitors to contact the clinic about appointments.</p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3><i class="fa fa-check-circle service-icon"></i>
+                    Patient-Focused Care</h3>
+                <p>Provide information suited to each patient's needs.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- APPOINTMENT AND CONTACT -->
+<section class="section contact" id="appointment">
+    <h2 class="section-title">Book an Appointment</h2>
+    <p class="section-subtitle" style="color:#d6e8f8">
+        Send an appointment request to the clinic.
+    </p>
+
+    <div class="w3-row-padding">
+
+        <div class="w3-col s12 m6">
+            <div class="card">
+                <h3>Appointment Request</h3>
+
+                <!-- Replace with your real clinic email -->
+                <form action="mailto:yourclinic@example.com"
+                      method="post"
+                      enctype="text/plain">
+
+                    <label>Your Name</label>
+                    <input type="text"
+                           name="Patient Name"
+                           placeholder="Enter your full name"
+                           required>
+
+                    <label>Phone Number</label>
+                    <input type="tel"
+                           name="Phone"
+                           placeholder="Enter phone number"
+                           required>
+
+                    <label>Choose Service</label>
+                    <select name="Service" required>
+                        <option value="">Select a service</option>
+                        <option>Dental Check-up</option>
+                        <option>Teeth Cleaning</option>
+                        <option>Tooth Pain Consultation</option>
+                        <option>Dental Fillings</option>
+                        <option>Root Canal Consultation</option>
+                        <option>Other</option>
+                    </select>
+
+                    <label>Preferred Date</label>
+                    <input type="date" name="Preferred Date">
+
+                    <label>Message</label>
+                    <textarea name="Message"
+                              rows="4"
+                              placeholder="Write your message"></textarea>
+
+                    <button type="submit" class="btn">
+                       <i class="fa fa-paper-plane"></i>
+                        Send Request
+                    </button>
+                </form>
+
+                <p style="color:#637187;font-size:13px">
+                    Note: This basic form uses the visitor's email app.
+                    It does not automatically store appointments.
+                </p>
+            </div>
+        </div>
+
+        <div class="w3-col s12 m6">
+            <div class="w3-padding-16">
+                <h3><i class="fa fa-map-marker"></i> Clinic Address</h3>
+                <p>Enter your real clinic address here.</p>
+
+                <h3><i class="fa fa-phone"></i> Call Us</h3>
+                <p>
+                    <a href="tel:+910000000000" style="color:#61d9ff">
+                        +91 00000 00000
+                    </a>
+                </p>
+
+                <h3><i class="fa fa-envelope"></i> Email Us</h3>
+                <p>
+                    <a href="mailto:yourclinic@example.com"
+                       style="color:#61d9ff">
+                        yourclinic@example.com
+                    </a>
+                </p>
+
+                <h3><i class="fa fa-clock-o"></i> Clinic Timings</h3>
+                <p>Add your actual clinic timings here.</p>
+
+                <a class="btn"
+                   href="https://wa.me/910000000000"
+                   target="_blank"
+                   rel="noopener">
+                    <i class="fa fa-whatsapp"></i>
+                    Contact on WhatsApp
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- DEVELOPERS -->
+<section class="section developers" id="developers">
+    <h2 class="section-title">Developers of Dental Clinic Website</h2>
+
+    <p class="section-subtitle">
+        Website designed and developed by our team.
+    </p>
+
+    <div class="w3-row-padding w3-center">
+
+        <!-- DEVELOPER 1 -->
+        <div class="w3-col s12 m4 l2">
+            <div class="card">
+                <img src="kuldeep.jpg"
+                     alt="Kuldeep photo"
+                     class="developer-photo">
+
+                <h3 class="developer-name">Kuldeep</h3>
+                <p>Web Developer</p>
+            </div>
+        </div>
+
+        <!-- DEVELOPER 2 -->
+        <div class="w3-col s12 m4 l2">
+            <div class="card">
+                <img src="harsh.jpg"
+                     alt="Harsh photo"
+                     class="developer-photo">
+
+                <h3 class="developer-name">Harsh</h3>
+                <p>Web Developer</p>
+            </div>
+        </div>
+
+        <!-- DEVELOPER 3 -->
+        <div class="w3-col s12 m4 l2">
+            <div class="card">
+                <img src="pragati.jpg"
+                     alt="Pragati photo"
+                     class="developer-photo">
+
+                <h3 class="developer-name">Pragati</h3>
+                <p>UI Designer</p>
+            </div>
+        </div>
+
+        <!-- DEVELOPER 4 -->
+        <div class="w3-col s12 m6 l3">
+            <div class="card">
+                <img src="sanjana.jpg"
+                     alt="Sanjana photo"
+                     class="developer-photo">
+
+                <h3 class="developer-name">Sanjana</h3>
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+
+        <!-- DEVELOPER 5 -->
+        <div class="w3-col s12 m6 l3">
+            <div class="card">
+                <img src="sheetal.jpg"
+                     alt="Sheetal photo"
+                     class="developer-photo">
+
+                <h3 class="developer-name">Sheetal</h3>
+                <p>Web Designer</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <h3>
+        <i class="fa fa-plus-square"></i>
+        SmileCare Dental Clinic
+    </h3>
+
+    <p>Healthy Teeth, Beautiful Smile!</p>
+
+    <p>
+        <a href="#home" style="color:#61d9ff">Home</a> |
+        <a href="#services" style="color:#61d9ff">Services</a> |
+        <a href="#doctors" style="color:#61d9ff">Doctors</a> |
+        <a href="#developers" style="color:#61d9ff">Developers</a>
+    </p>
+
+    <p>Website developed by Kuldeep, Harsh, Pragati, Sanjana and Sheetal.</p>
+    <p>&copy; 2026 SmileCare Dental Clinic. All rights reserved.</p>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp"
+   href="https://wa.me/910000000000"
+   target="_blank"
+   rel="noopener"
+   title="Contact on WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
+</body>
+</html>
